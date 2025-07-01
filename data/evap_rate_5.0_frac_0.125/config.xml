@@ -1,0 +1,30 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<antsim>
+    <gui>
+        <activate bool="false" /> <!-- activate GUI -->
+        <fullscreen bool="false" /> <!-- enter fullscreen mode -->
+    </gui>
+    <simulation>
+        <map path="/home/kchin/hacking_the_colony/map.bmp" /> <!-- path to the food map image relative to this config file -->
+        <steps int="50000" /> <!-- number of simulation steps -->
+        <iterations int="20" /> <!-- number of trials to repeat -->
+    </simulation>
+    <total_ants>
+        <number int="1024" /> <!-- number of ants to simulatate in total -->
+    </total_ants>
+    <patience>
+        <activate bool="false" /> <!-- activate patience/cautionary pheromone secretion-->
+        <refill_period_range str_arr="1" /> <!-- period to reach max refill amount, in units of timesteps; multiple values possible (space delimited) -->
+        <max_range str_arr="1" /> <!-- maximum patience/cautionary pheromone possible; multiple values possible (space delimited) -->
+        <pheromone_evaporation_multiplier float="1" /> <!-- patience/cautionary pheromone evaporation rate -->
+    </patience>
+    <malicious_ants>
+        <fraction float="0.125" /> <!-- fraction of ants that are malicious -->/
+        <focus bool="true" /> <!-- activate malicious ants' focus on the food source -->
+        <timer int="100" /> <!-- delay after which the attack is launched -->
+        <pheromone_intensity_multiplier float="1" /> <!-- fake food pheromone intensity factor -->
+        <pheromone_evaporation_multiplier float="5.0" /> <!-- fake food pheromone evaporation rate -->/
+        <tracing_pattern type="FOOD" /> <!-- decide whether the mal. ants follow a specific type of pheromone; choose either: FOOD, HOME or RANDOM -->
+    </malicious_ants>
+    <csv_output prefix="replication_heatmap_focus" /> <!-- CSV output file prefix -->
+</antsim>

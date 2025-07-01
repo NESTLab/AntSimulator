@@ -5,7 +5,7 @@ import seaborn as sns
 import glob
 import os
 
-path="/home/khaiyichin/research/hacking_the_colony_data/sim_run_113022/heatmap_patience/alpha/"
+path="/home/ashay/Downloads/basic_attack_xp/replication_heatmap_focus"
 patience_max = [50, 100, 250, 500, 750, 1000]
 patience_refill_period = [1, 2, 5, 10, 50, 100, 1000]
 patience_max.reverse()

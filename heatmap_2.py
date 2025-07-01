@@ -5,7 +5,7 @@ import seaborn as sns
 import glob
 import os
 
-path="/home/khaiyichin/research/hacking_the_colony_data/sim_run_121322/replication_heatmap_focus/"
+path="/home/ashay/Downloads/basic_attack_xp/replication_heatmap_focus/"
 # path="/home/khaiyichin/research/hacking_the_colony_data/sim_run_112822/deep_dive_evap_rate/alpha/"
 evapor_rate_range = [0.0, 0.5, 1.0, 2.0, 5.0, 10.0, 50.0, 100.0, 500.0, 1000.0]
 # evapor_rate_range = list(range(1,16,2))
@@ -57,7 +57,7 @@ for i,ax in enumerate(axn.flat):
     elif (i == 2): ax.set_title("Average cooperator fraction\n(collected)")
     else: ax.set_title("Average cooperator fraction\n(delivered)")
     
-    plot = sns.heatmap(df[i], ax=ax, xticklabels = y, yticklabels = x, cmap=color_palette, cbar=True, annot=False, fmt=".2f", vmin=0, vmax=1 if i>1 else 22)
+    plot = sns.heatmap(df[i], ax=ax, xticklabels=y, yticklabels=x, cmap=color_palette, cbar=True, annot=True, fmt=".2f", vmin=0, vmax=1 if i>1 else 22, annot_kws={"fontsize":5})
     ax.set_xticklabels(y, rotation=45, va="top", ha="center")
     ax.set_yticklabels(x, rotation=0)
 

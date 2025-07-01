@@ -4,7 +4,7 @@ import pandas as pd
 import seaborn as sns
 import glob
 
-path = r'./data_exp-mal_frac-mal_evpr_rate-one_iter' # use your path
+path = r'./data/evap_rate_1.0_frac_0.03125' # use your path
 evapor_set = [0.0,0.5,1.0,2.0,5.0,10.0,50.0,100.0,500.0,1000.0]
 evapor_set.reverse()
 all_files = glob.glob(path + "/*_iter-0.csv")

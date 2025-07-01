@@ -61,7 +61,7 @@ struct Colony
           else
             angle = getRandRange(2.0f * PI); // Sets even distribution
 
-          ants.emplace_back(x, y, angle, false, true, ant_tracing_pattern, hell_phermn_intensity_multiplier); 
+          ants.emplace_back(x+400, y+400, angle, false, true, ant_tracing_pattern, hell_phermn_intensity_multiplier); 
 
           const uint64_t index = 4 * i;
           ants_va[index + 0].color = Conf::MALICIOUS_ANT_COLOR;
